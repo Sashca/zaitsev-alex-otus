@@ -1,10 +1,16 @@
-function makeAdder() {
+function SumAdder() {
     let currentSum = 0;
-    return function (number) {
-        if ((number !== undefined) && (typeof number === "number")) currentSum += number;
-        return currentSum;
+    function Adder(number) {
+        if ((number !== undefined) && (typeof number === "number")) {
+            currentSum += number;
+            return Adder;
+        } else {
+            return currentSum;
+        }
     }
+    return Adder;
 }
 
-let sum = makeAdder();
+let sum = SumAdder();
 
+console.log(sum(2)(2)(3)());
