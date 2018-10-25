@@ -1,16 +1,16 @@
-function SumAdder() {
+function sumAdder() {
     let currentSum = 0;
-    function Adder(number) {
+    function adder(number) {
         if ((number !== undefined) && (typeof number === "number")) {
             currentSum += number;
-            return Adder;
+            return adder;
         } else {
             return currentSum;
         }
     }
-    return Adder;
+    return adder;
 }
 
-let sum = SumAdder();
+let sum = sumAdder();
 
 console.log(sum(2)(2)(3)());
