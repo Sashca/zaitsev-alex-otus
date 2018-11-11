@@ -11,12 +11,12 @@ var fn2 = () => new Promise(resolve => {
 var promiseReduce = function(asyncFunctions, reduce, initialValue) {
     return asyncFunctions.reduce(function (item, value) {
         return item.then(value).then((a) => {
-            return reduce(initialValue, a);
+            return initialValue = reduce(initialValue, a);
         });
     }, Promise.resolve());
 }
 
-promiseReduce([fn1, fn2], function (memo, value) {
+promiseReduce([fn1, fn1, fn1, fn2], function (memo, value) {
     console.log("reduce");
-    return memo * value;
+    return memo + value;
 } , 1).then(console.log);
