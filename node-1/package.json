@@ -1,0 +1,17 @@
+{
+  "name": "test-request",
+  "version": "1.0.0",
+  "description": "тест запрос к http-серверу",
+  "main": "request.js",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "node-fetch": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node request.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
