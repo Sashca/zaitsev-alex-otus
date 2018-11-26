@@ -17,8 +17,10 @@ fs.stat(pathFolder, (error, info) => {
                 console.log(result);
             });
         } else {
-            console.log(pathFolder + " - is not a directory")
+            console.log (pathFolder + " - is not a directory")
         }
+    } else {
+        console.log ("Error run fs.stat - path: " + pathFolder);
     }
 });
 
