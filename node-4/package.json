@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_rest_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rss_service.js",
+  "scripts": {
+    "test": "mocha --timeout 5000 --recursive",
+    "start": "node rss_service.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "rss-parser": "^3.5.4",
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
